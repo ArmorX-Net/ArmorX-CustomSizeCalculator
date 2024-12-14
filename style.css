@@ -6,14 +6,16 @@ body {
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
 .container {
-    width: 350px; /* Default width for desktop */
+    width: 90%; /* Takes up 90% of the screen width */
+    max-width: 400px; /* Limit width to 400px on larger devices */
     background-color: #ffffff;
     padding: 20px;
+    margin-top: 20px; /* Adds spacing from the top */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-top: 5px solid #a4e053;
@@ -28,14 +30,14 @@ body {
 }
 
 .logo img {
-    max-width: 100px; /* Scales the logo appropriately */
+    max-width: 120px; /* Increase the logo size for better visibility */
     height: auto;
 }
 
 /* Adjust title */
 h2 {
     text-align: center;
-    font-size: 20px;
+    font-size: 22px; /* Larger font size for better readability */
     margin-bottom: 20px;
     color: #333333;
 }
@@ -54,7 +56,7 @@ input, select, button {
     margin-top: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 16px; /* Slightly larger font size for touch devices */
 }
 
 button {
@@ -62,7 +64,7 @@ button {
     color: #ffffff;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px; /* Larger button font for better visibility */
     margin-top: 15px;
 }
 
@@ -103,7 +105,7 @@ html {
 /* Responsive Design for Mobile */
 @media screen and (max-width: 768px) {
     body {
-        padding: 20px; /* Add some padding for smaller screens */
+        padding: 20px; /* Add padding for smaller screens */
         height: auto; /* Allow scrolling on small screens */
     }
 
@@ -114,19 +116,19 @@ html {
     }
 
     .logo img {
-        max-width: 80px; /* Reduce the logo size */
+        max-width: 100px; /* Adjust logo size for smaller devices */
     }
 
     h2 {
-        font-size: 18px; /* Adjust title font size for small screens */
+        font-size: 20px; /* Adjust title font size for smaller screens */
     }
 
     input, select, button {
-        font-size: 16px; /* Slightly larger inputs for touch devices */
+        font-size: 16px; /* Keep inputs and buttons readable on touch devices */
     }
 
     p {
-        font-size: 12px; /* Smaller text for results */
+        font-size: 13px; /* Adjust text size for results */
     }
 }
 
