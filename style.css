@@ -95,22 +95,17 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Global Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Responsive Design for Mobile */
 @media screen and (max-width: 768px) {
     body {
         padding: 20px; /* Add some padding for smaller screens */
         height: auto; /* Allow scrolling on small screens */
     }
- @media screen and (max-height: 600px) {
-    body {
-        align-items: flex-start; /* Push content to the top */
-        padding-top: 20px;
-    }
-     html {
-    scroll-behavior: smooth;
-}
-
-}
 
     .container {
         width: 100%; /* Full width for smaller devices */
@@ -132,5 +127,13 @@ a:hover {
 
     p {
         font-size: 12px; /* Smaller text for results */
+    }
+}
+
+/* Responsive Design for Very Small Heights */
+@media screen and (max-height: 600px) {
+    body {
+        align-items: flex-start; /* Push content to the top */
+        padding-top: 20px;
     }
 }
