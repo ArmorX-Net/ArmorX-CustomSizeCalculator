@@ -101,6 +101,16 @@ a:hover {
         padding: 20px; /* Add some padding for smaller screens */
         height: auto; /* Allow scrolling on small screens */
     }
+ @media screen and (max-height: 600px) {
+    body {
+        align-items: flex-start; /* Push content to the top */
+        padding-top: 20px;
+    }
+     html {
+    scroll-behavior: smooth;
+}
+
+}
 
     .container {
         width: 100%; /* Full width for smaller devices */
