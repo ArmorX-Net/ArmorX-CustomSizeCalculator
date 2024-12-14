@@ -3,8 +3,9 @@ function calculate() {
     const height = parseFloat(document.getElementById("height").value);
     const length = parseFloat(document.getElementById("length").value);
 
-    if (!height || !length) {
-        document.getElementById("resultArea").innerText = "Please enter valid height and length.";
+    // Input validation
+    if (!height || height <= 0 || !length || length <= 0) {
+        document.getElementById("resultArea").innerText = "Please enter valid positive values for height and length.";
         document.getElementById("resultSize").innerText = "";
         document.getElementById("resultLink").innerText = "";
         return;
