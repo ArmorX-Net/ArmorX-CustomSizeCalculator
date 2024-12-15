@@ -2,7 +2,6 @@ function calculate() {
     const unit = document.getElementById("unit").value;
     const height = parseFloat(document.getElementById("height").value);
     const length = parseFloat(document.getElementById("length").value);
-
     // Validation for inputs
     if (!height || height <= 0 || !length || length <= 0) {
         document.getElementById("resultArea").innerText = "Please enter valid positive values for height and length.";
@@ -106,7 +105,6 @@ function calculate() {
             size = "Size out of range";
         }
     }
-
     // Display area and size
     document.getElementById("resultArea").innerText = "Area: " + areaText;
     document.getElementById("resultSize").innerText = "Size: " + size;
