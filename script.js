@@ -3,14 +3,34 @@ function calculate() {
     const height = parseFloat(document.getElementById("height").value);
     const length = parseFloat(document.getElementById("length").value);
 
-    // Input validation
+    // Validation for inputs
     if (!height || height <= 0 || !length || length <= 0) {
         document.getElementById("resultArea").innerText = "Please enter valid positive values for height and length.";
         document.getElementById("resultSize").innerText = "";
         document.getElementById("resultLink").innerText = "";
+        document.getElementById("convertedHeight").innerText = "";
+        document.getElementById("convertedLength").innerText = "";
         return;
     }
 
+    // Convert height and length to cm
+    let heightCm, lengthCm;
+    if (unit === "Cm") {
+        heightCm = height;
+        lengthCm = length;
+    } else if (unit === "Inch") {
+        heightCm = Math.round(height * 2.54); // 1 inch = 2.54 cm
+        lengthCm = Math.round(length * 2.54);
+    } else if (unit === "Feet") {
+        heightCm = Math.round(height * 30.48); // 1 foot = 30.48 cm
+        lengthCm = Math.round(length * 30.48);
+    }
+
+    // Display converted height and length
+    document.getElementById("convertedHeight").innerText = `Window Frame Height (in Cm): ${heightCm}`;
+    document.getElementById("convertedLength").innerText = `Window Frame Width/Length (in Cm): ${lengthCm}`;
+
+    // Calculate area
     let area = height * length;
     let size = "";
     let areaText = "";
@@ -87,8 +107,11 @@ function calculate() {
         }
     }
 
+    // Display area and size
     document.getElementById("resultArea").innerText = "Area: " + areaText;
     document.getElementById("resultSize").innerText = "Size: " + size;
+
+    // Display product link
     if (link) {
         document.getElementById("resultLink").innerHTML = `<a href="${link}" target="_blank">View Product for ${size}</a>`;
     } else {
