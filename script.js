@@ -111,7 +111,7 @@ function calculate() {
 
     // Display product link
     if (link) {
-        document.getElementById("resultLink").innerHTML = `<a href="${link}" target="_blank">View Product for ${size}</a>`;
+        document.getElementById("resultLink").innerHTML = `<a href="${link}" target="_blank">CLICK HERE:Amazon Product Link:ArmorX Window Size: ${size}</a>`;
     } else {
         document.getElementById("resultLink").innerText = "";
     }
