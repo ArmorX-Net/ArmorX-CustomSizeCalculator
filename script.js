@@ -27,7 +27,7 @@ function calculate() {
 
     // Display converted height and length
     document.getElementById("convertedHeight").innerText = `Window Frame Height (in Cm): ${heightCm}`;
-    document.getElementById("convertedLength").innerText = `Window Frame Width/Length (in Cm): ${lengthCm}`;
+    document.getElementById("convertedLength").innerText = `Window Frame Width (in Cm): ${lengthCm}`;
 
     // Calculate area
     let area = height * length;
