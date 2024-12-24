@@ -37,7 +37,7 @@ function calculate() {
 
     if (unit === "Cm") {
         areaText = area + " Sq.Cm";
-        if (area <= 5574) {
+        if (area <= 4645) {
             size = "X-SMALL";
             link = "https://www.amazon.in/dp/B0DQDQBM8G";
         } else if (area <= 11149) {
@@ -60,7 +60,7 @@ function calculate() {
         }
     } else if (unit === "Inch") {
         areaText = area + " Sq.In";
-        if (area <= 864) {
+        if (area <= 720) {
             size = "X-SMALL";
             link = "https://www.amazon.in/dp/B0DQDQBM8G";
         } else if (area <= 1729) {
@@ -83,7 +83,7 @@ function calculate() {
         }
     } else if (unit === "Feet") {
         areaText = area + " Sq.Ft";
-        if (area <= 6) {
+        if (area <= 5) {
             size = "X-SMALL";
             link = "https://www.amazon.in/dp/B0DQDQBM8G";
         } else if (area <= 12) {
